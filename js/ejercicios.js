@@ -34,3 +34,22 @@ function ejercicio2() {
     console.log(mensaje);
     mostrarResultado(mensaje);
 }
+function ejercicio3(){
+    const mensaje = 10 == '10' ? "Si, en JavaScript 10 es == '10'" : "No, en JavaScript 10 no es == '10'"
+    mostrarResultado(mensaje);
+}
+function ejercicio4() {
+
+    const ciudad = {};
+    
+    ciudad.nombre = prompt("Ingresa el nombre de la ciudad:");
+    ciudad.fechaFundacion = new Date(prompt("Ingresa la fecha de fundación de la ciudad (formato YYYY-MM-DD):")).toLocaleDateString();
+    ciudad.poblacion = parseInt(prompt("Ingresa la población de la ciudad:"));
+    ciudad.extension = parseFloat(prompt("Ingresa la extensión de la ciudad (en km²):"));
+
+    let mensaje = "Información de la ciudad:\n";
+    for (let clave in ciudad) {
+        mensaje += `${clave}: ${ciudad[clave]}\n`;
+    }
+    mostrarResultado(mensaje);
+}
