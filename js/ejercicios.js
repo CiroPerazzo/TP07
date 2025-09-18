@@ -53,3 +53,41 @@ function ejercicio4() {
     }
     mostrarResultado(mensaje);
 }
+function ejercicio5() {
+    const input = prompt("Ingresa números separados por coma");
+  
+    const partes = input.split(',')
+    const arrayOriginal = []
+  
+    for (let i = 0; i < partes.length; i++) {
+      arrayOriginal[i] = parseFloat(partes[i])
+    }
+  
+    const nuevoArray = [];
+  
+    for (let i = 0; i < arrayOriginal.length; i++) {
+      nuevoArray[i] = arrayOriginal[i] * 2;
+    }
+  
+    mostrarResultado(nuevoArray.join(", "))
+  }
+    function ejercicio6a(){
+        let mensaje = ""
+        for(let i = 1; i <= 6; i++){
+            mensaje += "*".repeat(i) + "<br>"
+        }
+        mostrarResultado(mensaje)
+    }
+    function ejercicio6b(){
+        let mensaje = ""
+        for(let i = 1; i <= 6; i++){
+            mensaje += "-".repeat(9) + "<br>"
+            switch(i)
+            {
+                case 1: mensaje[5].replace("*")
+                break;
+                case 2: mensaje[4, 5, 6].replace("*")
+            }
+        }
+        mostrarResultado(mensaje)
+    }
